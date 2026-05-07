@@ -10,6 +10,7 @@ amarelo = "\033[1;33m"
 ciano = "\033[1;36m"
 fim = "\033[0m"
 
+print ("É isso")
 
 # Estrutura do Código + Condicionais
 
