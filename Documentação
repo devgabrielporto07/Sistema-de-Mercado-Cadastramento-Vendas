@@ -1,0 +1,70 @@
+📥 Lista de Entrada (Inputs do Usuário)
+
+O sistema recebe os seguintes dados via entrada do usuário:
+
+Nome do produto (texto)
+Preço do produto (número decimal)
+Quantidade do produto (número inteiro)
+Opção do menu (número inteiro)
+Nome do produto para compra (texto)
+Quantidade desejada para compra (número inteiro)
+Valor pago pelo cliente (número decimal)
+
+🔀 Regras Condicionais (if / elif / else)
+Validação de opção do menu
+Se a opção for válida → executa ação
+Senão → exibe mensagem de erro
+Verificação de existência do produto
+Se o produto existir → continua o processo
+Senão → informa que não foi encontrado
+Controle de estoque
+Se a quantidade em estoque for suficiente → permite venda
+Senão → exibe “estoque insuficiente”
+Validação de pagamento
+Se o valor pago for suficiente → calcula troco
+Senão → exibe “pagamento insuficiente”
+🧪 Casos de Teste
+✅ Caso 1 — Venda normal
+
+Entrada:
+
+Produto: arroz
+Quantidade: 2
+Preço: 10
+Valor pago: 25
+
+Saída esperada:
+
+Total: 20
+Troco: 5
+Mensagem de compra concluída
+❌ Caso 2 — Estoque insuficiente
+
+Entrada:
+
+Produto: feijão
+Quantidade em estoque: 1
+Quantidade desejada: 3
+
+Saída esperada:
+
+Mensagem: “Estoque insuficiente”
+❌ Caso 3 — Pagamento insuficiente
+
+Entrada:
+
+Produto: carne
+Quantidade: 1
+Preço: 20
+Valor pago: 10
+
+Saída esperada:
+
+Mensagem: “Pagamento insuficiente”
+
+📊 TABELA DE DECISÃO — Sistema de Mercado
+Condição 1 (Produto existe?)	Condição 2 (Estoque suficiente?)	Condição 3 (Pagamento suficiente?)	Condição 4 (Promoção ativa?)	Resultado
+Sim	   Sim	 Sim	 Sim	 Venda realizada com desconto
+Sim	   Sim	 Sim	 Não	 Venda realizada sem desconto
+Sim	   Não	  —	      —	     Estoque insuficiente
+Não	    —     —	      —	     Produto não encontrado
