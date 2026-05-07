@@ -10,26 +10,26 @@ fim = "\033[0m"
 
 # Estoque
 estoque = {
-    "ARROZ":            {"unidade": "5kg",             "preco_min": 15.00, "preco_max": 25.00},
-    "FEIJÃO CARIOCA":   {"unidade": "1kg",             "preco_min":  6.00, "preco_max": 10.00},
-    "AÇÚCAR":           {"unidade": "1kg",             "preco_min":  4.00, "preco_max":  6.00},
-    "CAFÉ":             {"unidade": "500g",            "preco_min": 26.00, "preco_max": 36.00},
-    "LEITE":            {"unidade": "1L",              "preco_min":  4.00, "preco_max":  6.00},
-    "ÓLEO DE SOJA":     {"unidade": "900ml",           "preco_min":  6.00, "preco_max":  9.00},
-    "MACARRÃO":         {"unidade": "500g",            "preco_min":  4.00, "preco_max":  7.00},
-    "OVOS":             {"unidade": "cartela c/12",    "preco_min": 10.00, "preco_max": 16.00},
-    "FRANGO":           {"unidade": "1kg",             "preco_min":  9.00, "preco_max": 20.00},
-    "PÃO FRANCÊS":      {"unidade": "1kg",             "preco_min": 12.00, "preco_max": 18.00},
-    "MARGARINA":        {"unidade": "500g",            "preco_min":  7.00, "preco_max": 12.00},
-    "FARINHA DE TRIGO": {"unidade": "1kg",             "preco_min":  5.00, "preco_max":  8.00},
-    "TOMATE":           {"unidade": "1kg",             "preco_min":  6.00, "preco_max": 12.00},
-    "BATATA":           {"unidade": "1kg",             "preco_min":  5.00, "preco_max":  9.00},
-    "CEBOLA":           {"unidade": "1kg",             "preco_min":  4.00, "preco_max":  8.00},
-    "SABÃO EM PÓ":      {"unidade": "1kg",             "preco_min": 12.00, "preco_max": 25.00},
-    "PAPEL HIGIÊNICO":  {"unidade": "pacote 12 rolos", "preco_min": 15.00, "preco_max": 30.00},
-    "DETERGENTE":       {"unidade": "500ml",           "preco_min":  2.00, "preco_max":  4.00},
-    "ÁGUA SANITÁRIA":   {"unidade": "1L",              "preco_min":  3.00, "preco_max":  6.00},
-    "SABONETE":         {"unidade": "unidade",         "preco_min":  2.00, "preco_max":  5.00},
+    "ARROZ":            {"unidade": "5kg",             "preco": 15.00},
+    "FEIJÃO CARIOCA":   {"unidade": "1kg",             "preco":  6.00},
+    "AÇÚCAR":           {"unidade": "1kg",             "preco":  4.00},
+    "CAFÉ":             {"unidade": "500g",            "preco": 26.00},
+    "LEITE":            {"unidade": "1L",              "preco":  4.00},
+    "ÓLEO DE SOJA":     {"unidade": "900ml",           "preco":  6.00},
+    "MACARRÃO":         {"unidade": "500g",            "preco":  4.00},
+    "OVOS":             {"unidade": "cartela c/12",    "preco": 10.00},
+    "FRANGO":           {"unidade": "1kg",             "preco":  9.00},
+    "PÃO FRANCÊS":      {"unidade": "1kg",             "preco": 12.00},
+    "MARGARINA":        {"unidade": "500g",            "preco":  7.00},
+    "FARINHA DE TRIGO": {"unidade": "1kg",             "preco":  5.00},
+    "TOMATE":           {"unidade": "1kg",             "preco":  6.00},
+    "BATATA":           {"unidade": "1kg",             "preco":  5.00},
+    "CEBOLA":           {"unidade": "1kg",             "preco":  4.00},
+    "SABÃO EM PÓ":      {"unidade": "1kg",             "preco": 12.00},
+    "PAPEL HIGIÊNICO":  {"unidade": "pacote 12 rolos", "preco": 15.00},
+    "DETERGENTE":       {"unidade": "500ml",           "preco":  2.00},
+    "ÁGUA SANITÁRIA":   {"unidade": "1L",              "preco":  3.00},
+    "SABONETE":         {"unidade": "unidade",         "preco":  2.00},
 }
 
 # Estrutura do Código + Condicionais
@@ -62,18 +62,17 @@ elif escolha_usuario == 2:
 
     produtos_lista = list(estoque.items())
     for i, (nome, dados) in enumerate(produtos_lista, start=1):
-        faixa = f"R$ {dados['preco_min']:.2f} a R$ {dados['preco_max']:.2f}"
-        print (f"({i}) {nome} - {dados['unidade']} - {faixa}")
+        print (f"({i}) {nome} - {dados['unidade']} - R$ {dados['preco']:.2f}")
 
-    numero        = int(input("\nDigite o número do produto: "))
+    numero         = int(input("\nDigite o número do produto: "))
     nome_escolhido, dados_escolhidos = produtos_lista[numero - 1]
-    preco_venda   = float(input(f"Preço de venda em (R$): "))
-    qtd_venda     = int(input("Quantidade vendida: "))
-    total         = preco_venda * qtd_venda
+    qtd_venda      = int(input("Quantidade vendida: "))
+    total          = dados_escolhidos['preco'] * qtd_venda
 
     print (f"{verde}Venda registrada com sucesso!!{fim}")
     print (f"Produto: {nome_escolhido} ({dados_escolhidos['unidade']})")
     print (f"Quantidade: {qtd_venda}")
+    print (f"Preço unit: R$ {dados_escolhidos['preco']:.2f}")
     print (f"Total: R$ {total:.2f}")
 
 else:
