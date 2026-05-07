@@ -12,14 +12,18 @@ fim = "\033[0m"
 
 # Estrutura do Código + Condicionais
 
-print ("-=-"*8)
+print (f"{amarelo}-=-{fim}"*8)
 print ("  MERCADINHO DO SEU ZÉ ")
-print ("-=-"*8)
+print (f"{amarelo}-=-{fim}"*8)
 
-print ("Inicializando o sistema...\n")
-sleep (1.5)
+print (f"{ciano}Inicializando o sistema...{fim}\n")
+sleep (1)
+print (f"{amarelo}Processando...{fim}")
+sleep (1)
+nome1 = str(input("\nAntes de tudo, Digite seu nome: ")).strip()
+print (f"{verde}Tudo pronto, vamos lá{fim}")
 
-print ("=== Olá, seja bem vindo ao sistema de estoque e vendas ===")
+print (f"=== Olá {nome1}, seja bem vindo ao sistema de cadastramento e vendas ===")
 print ("(1) Cadastrar Produtos")
 print ("(2) Vender Produtos")
 
