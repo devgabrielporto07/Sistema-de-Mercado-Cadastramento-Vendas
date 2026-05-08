@@ -78,5 +78,9 @@
   "SABONETE": {
     "unidade": "unidade",
     "preco": 2.0
+  },
+  "BATATA FRANCESA": {
+    "unidade": "sim",
+    "preco": 13.0
   }
 }
