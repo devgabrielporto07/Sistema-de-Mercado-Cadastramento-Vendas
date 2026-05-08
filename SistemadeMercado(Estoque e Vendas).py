@@ -23,7 +23,7 @@ sleep (1)
 nome1 = str(input("\nAntes de tudo, Digite seu nome: ")).strip()
 print (f"{verde}Tudo pronto, vamos lá{fim}")
 
-print (f"=== Olá {nome1}, seja bem vindo ao sistema de cadastramento e vendas ===")
+print (f"=== Olá {nome1}, seja bem vindo ao sistema de Cadastramento e de Vendas Produtos ===")
 print ("(1) Cadastrar Produtos")
 print ("(2) Vender Produtos")
 
@@ -33,16 +33,21 @@ escolha_usuario = int(input("\nEscolha uma opção: "))
 if escolha_usuario == 1:
     print ("========== Cadastramento de Produto ===========")
     nome_produto = str(input("Nome do produto: ")).upper().strip()
-    preco_produto = float(input("Preço do produto em (R$): "))
+    preco_produto1 = float(input("Preço do produto em (R$): "))
     quantidade_produto = int(input("Quantidade desejada: "))
 
     print (f"{verde}Produto cadastrado com sucesso!!{fim}")
     print (f"Nome: {nome_produto}")
-    print (f"Preço: {preco_produto:.2f}")
+    print (f"Preço: {preco_produto1:.2f}")
     print (f"Quantidade: {quantidade_produto}")
+# DANIEL MEXE AQUI NESSE ELIF NA PARTE DE VENDAS AS LISTAS VÊ COMO FUNCIONA
 elif escolha_usuario == 2:
-    print ("========== Venda de Produtos ==========")
-    produto_venda = str(input("Digite o nome do produto: ")).strip().upper()  
+    print ("========== Vendas de Produto ==========")
+    list  = ["ARROZ (0)", "FEIJÃO (1)", "PÃO (2)"]
+    print (list)
+    print (list [0])
+    produto_venda = str(input("Nome do produto: ")).upper().strip()
+    preco_produto2 = float(input("Preço do Produto (R$): "))
 else:
     print (f"{vermelho}Opção Inválida{fim}")
 
