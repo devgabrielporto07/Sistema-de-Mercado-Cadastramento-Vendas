@@ -1,0 +1,82 @@
+{
+  "ARROZ": {
+    "unidade": "5kg",
+    "preco": 15.0
+  },
+  "FEIJÃO CARIOCA": {
+    "unidade": "1kg",
+    "preco": 6.0
+  },
+  "AÇÚCAR": {
+    "unidade": "1kg",
+    "preco": 4.0
+  },
+  "CAFÉ": {
+    "unidade": "500g",
+    "preco": 26.0
+  },
+  "LEITE": {
+    "unidade": "1L",
+    "preco": 4.0
+  },
+  "ÓLEO DE SOJA": {
+    "unidade": "900ml",
+    "preco": 6.0
+  },
+  "MACARRÃO": {
+    "unidade": "500g",
+    "preco": 4.0
+  },
+  "OVOS": {
+    "unidade": "cartela c/12",
+    "preco": 10.0
+  },
+  "FRANGO": {
+    "unidade": "1kg",
+    "preco": 9.0
+  },
+  "PÃO FRANCÊS": {
+    "unidade": "1kg",
+    "preco": 12.0
+  },
+  "MARGARINA": {
+    "unidade": "500g",
+    "preco": 7.0
+  },
+  "FARINHA DE TRIGO": {
+    "unidade": "1kg",
+    "preco": 5.0
+  },
+  "TOMATE": {
+    "unidade": "1kg",
+    "preco": 6.0
+  },
+  "BATATA": {
+    "unidade": "1kg",
+    "preco": 5.0
+  },
+  "CEBOLA": {
+    "unidade": "1kg",
+    "preco": 4.0
+  },
+  "SABÃO EM PÓ": {
+    "unidade": "1kg",
+    "preco": 12.0
+  },
+  "PAPEL HIGIÊNICO": {
+    "unidade": "pacote 12 rolos",
+    "preco": 15.0
+  },
+  "DETERGENTE": {
+    "unidade": "500ml",
+    "preco": 2.0
+  },
+  "ÁGUA SANITÁRIA": {
+    "unidade": "1L",
+    "preco": 3.0
+  },
+  "SABONETE": {
+    "unidade": "unidade",
+    "preco": 2.0
+  }
+}
