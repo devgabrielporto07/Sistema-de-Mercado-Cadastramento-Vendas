@@ -8,6 +8,7 @@ vermelho = "\033[1;31m"
 magenta = "\033[1;34m"
 amarelo = "\033[1;33m"
 ciano = "\033[1;36m"
+branco = "\033[1;37m"
 negrito = "\033[1m"
 finalizacor = "\033[0m"
 
@@ -53,9 +54,19 @@ elif escolha_usuario == 2:
     print ("     ========== Vendas de Produto ==========")
 
     produtos  = {
-        "ARROZ": 12.00,
-        "FEIJÃO": 14.00,
-        "PÃO": 4.00
+    "ARROZ": 22.75,
+    "FEIJÃO": 7.25,
+    "ÓLEO": 7.50,
+    "AÇÚCAR": 5.00,
+    "CAFÉ": 21.50,
+    "LEITE": 6.25,
+    "CARNE": 42.50,
+    "MACARRÃO": 4.25,
+    "FARINHA": 5.75,
+    "PÃO": 18.50,
+    "MANTEIGA": 12.50,
+    "TOMATE": 8.00,
+    "BATATA": 8.00
     } 
     #Isso é um dicionario onde consigo guardar como uma lista so que atribuir valores também
 
@@ -67,7 +78,8 @@ elif escolha_usuario == 2:
     print(f"\n{verde}Produtos disponíveis no estoque:{finalizacor}\n")
 
     for nome, preco in produtos.items():
-        print(f"{nome} - R$ {preco:.2f}") 
+        print(f"{nome} - R$ {preco:.2f}")
+        
         #esse for ele basicamente consegue adicionar os produtos que tem no estoque juntamente com o preço de cada produto tlgd.
 
     while True:
@@ -87,7 +99,7 @@ elif escolha_usuario == 2:
             print(f"{verde}Sua lista de compras: {lista3}{finalizacor}") #aqui nesse print usuario consegue ver a sua lista de compras
             print(f"{verde}Valor atual: R$ {total:.2f}{finalizacor}") #aqui ele consegue ver o valor do seu carrinho
         else:
-            print(f"{vermelho}Produto não encontrado.{finalizacor}") #caso o usuario digite algo diferente do que esta no dicionario ele ira mostrar essa mensagem de erro
+            print(f"{vermelho}O Produto {branco}{prod2}{finalizacor} {vermelho}não foi encontrado. Por vavor, verifique a ortografia ou escolha um item da lista acima{finalizacor}") #caso o usuario digite algo diferente do que esta no dicionario ele ira mostrar essa mensagem de erro
 
 else:
     print (f"{vermelho}Opção Inválida{finalizacor}")
@@ -96,3 +108,10 @@ else:
 # Sistema de Troco futuramente...
 # Dúvidas:
 # try:, execept ValueError:
+
+"""valor_pagamento = float(input("Digite o valor do pagamento: "))
+        if valor_pagamento < preco:
+            print (f"{vermelho}Saldo Insuficiente. Por vavor Digite um valor válido. Aqui num é lugar de liso não kkkk.{finalizacor}")
+        elif valor_pagamento > preco:
+            troco = valor_pagamento - preco
+            print (f"{verde}O seu troco é {troco:.2f}{finalizacor}") """
