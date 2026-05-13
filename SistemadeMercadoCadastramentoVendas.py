@@ -27,7 +27,7 @@ print (f"{verde}Tudo pronto, vamos lá{finalizacor}\n")
 
 print (f"   === Olá {negrito}{nome1}{finalizacor}!, seja bem vindo ao sistema de Cadastramento e de Vendas Produtos ===\n")
 print ("                               (1) Cadastrar Produtos")
-print ("                               (2) Vender Produtos")
+print ("                               (2) Comprar Produtos")
 
 # Condicionais 
 
@@ -51,7 +51,7 @@ if escolha_usuario == 1:
     print ("Obrigado, Volte sempre! :)\n")
 
 elif escolha_usuario == 2:
-    print ("     ========== Vendas de Produto ==========")
+    print ("     ========== Compra de Produto ==========")
 
     produtos  = {
     "ARROZ": 22.75,
@@ -70,7 +70,7 @@ elif escolha_usuario == 2:
     } 
     #Isso é um dicionario onde consigo guardar como uma lista so que atribuir valores também
 
-    lista3 = [] 
+    lista3 = []
     #essa lista sera atribuida os valores que o usuario digitar nela mais pra frente no while
     total = 0 
     #essa variavel é feita para atribuir valores a ela a cada produto digitado pelo usuário
@@ -88,7 +88,7 @@ elif escolha_usuario == 2:
         if prod2 == "SAIR":
             print (f"\n{negrito}Encerrando o sistema...{finalizacor}")
             sleep (1.5)
-            print (f"{negrito}Sistema encerrado. Volte sempre! :){finalizacor}\n")
+            print (f"{negrito}Sistema encerrado, valor a pagar: R$ {total:.2f}. Volte sempre! :){finalizacor}\n")
             break 
             #aqui se encerra o while pois se não ele fica em loop infinito
 
