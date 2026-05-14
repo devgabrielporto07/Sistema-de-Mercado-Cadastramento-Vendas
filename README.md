@@ -4,18 +4,18 @@ Sistema de cadastramento e compras de produtos via terminal, desenvolvido em Pyt
 
 ---
 
-## 📋 Sobre o Projeto
+##  Sobre o Projeto:
 
 O **Mercadinho do Seu Zé** simula um sistema de mercado no terminal com duas funcionalidades principais:
 
 - **Cadastro de Produtos** — o usuário cadastra produtos e seus valores, formando uma lista
 - **Compra de Produtos** — o usuário seleciona itens de um estoque fixo, monta um carrinho e realiza o pagamento com cálculo de troco
 
-O projeto foi desenvolvido utilizando apenas conceitos fundamentais de Python: estruturas de repetição, condicionais, dicionários, listas e formatação colorida no terminal.
+O projeto foi desenvolvido utilizando apenas conceitos fundamentais de Python e um pouco de Git: estruturas de repetição, condicionais, dicionários, listas e formatação colorida no terminal.
 
 ---
 
-## 📸 Preview
+## Preview:
 
 >  *GIF de demonstração em breve*
 
@@ -24,13 +24,13 @@ O projeto foi desenvolvido utilizando apenas conceitos fundamentais de Python: e
 
 ---
 
-## 🚀 Como Rodar o Projeto
+##  Como Rodar o Projeto:
 
 ### Pré-requisitos
 
 - [Python 3.x](https://www.python.org/downloads/) instalado na máquina
 
-### Passo a passo
+### Passo a passo:
 
 ```bash
 # 1. Clone o repositório
@@ -47,22 +47,22 @@ python SistemaMercadoCadastramentoCompra.py
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## ⚒ Tecnologias Utilizadas:
 
 - **Python 3** — linguagem principal
-- **Biblioteca `time`** — para efeitos de delay no terminal
+- **Biblioteca `time`** — para efeitos de delay no terminal para passar a impressão que o sistema do mercadinho seja antigo
 - **Cores ANSI** — para estilização da interface no terminal
 
 ---
 
-## 📚 Conceitos Aplicados
+## Conceitos Aplicados:
 
 - Estruturas condicionais (`if`, `elif`, `else`)
 - Estruturas de repetição (`for`, `while`)
 - Listas e Dicionários
 - Entrada e saída de dados
 - Formatação de strings com f-strings
-- Comandos Iniciais do Git: 
+- Comandos básicos do Git: 
 - git init
 - git add .
 - git commit -m ""
@@ -71,20 +71,20 @@ python SistemaMercadoCadastramentoCompra.py
 - git clone ""
 ---
 
-## 👨‍💻 Autor
+## Autor
 
 Feito por **Gabriel Porto** — estudante de Ciência da Computação na UNINASSAU.
 
 ---
 
-## 🤝 Contribuidores
+## Contribuidores
 
 - [@Marcos Soares](https://github.com/mssoaress)
 - [@Daniel Mota](https://github.com/dplayerf)
 
 ---
 
-## 📧 Contato
+## Contato
 
 Dúvidas ou sugestões? Abre uma issue no repositório ou me chama nas redes.
 

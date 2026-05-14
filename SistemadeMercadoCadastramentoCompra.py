@@ -39,16 +39,18 @@ if escolha_usuario == 1:
     lista = []
 
     n = int(input("\nDigite a quantidade de produtos que você deseja cadastrar: "))
-
-    for i in range(n):
+    if n == 0:
+        print (f"{vermelho}Nenhum produto cadastrado. Por vavor renicie o sistema e tente novamente{finalizacor}")
+    else:
+        for i in range(n):
             prod = input(f'Digite o nome do {i+1}º Produto: ').replace (" ", "")
             valor = float(input(f'Digite o valor do {i+1}º Produto (R$): '))
 
             lista.append([prod, valor])
-    print (f"\n{magenta}Lista atualizada{finalizacor}")
-    for item in lista:
-        print(f"Produto: {item[0]} | Valor: R$ {item[1]:.2f}")
-    print ("Obrigado, Volte sempre! :)\n")
+        print (f"\n{magenta}Lista atualizada{finalizacor}")
+        for item in lista:
+            print(f"Produto: {item[0]} | Valor: R$ {item[1]:.2f}")
+        print ("Obrigado, Volte sempre! :)\n")
 
 elif escolha_usuario == 2:
     print ("     ========== Compras de Produto ==========")
@@ -79,7 +81,7 @@ elif escolha_usuario == 2:
         print(f"{nome} - R$ {preco:.2f}")
 
     while True:
-        prod2 = input("\nDigite o nome do produto que você quer adicionar a sua lista de compras e se quiser ir para o Pagamento digite (PAGAMENTO): ").upper().strip().replace (" ", "") 
+        prod2 = input("\nDigite o nome do produto que você quer adicionar a sua lista de compras ou se quiser ir para o Pagamento digite (PAGAMENTO): ").upper().strip().replace (" ", "") 
         if prod2 == "PAGAMENTO":
             print (f"\n{negrito}Processando tela de pagamento...{finalizacor}")
             sleep (1.5) 
@@ -94,20 +96,20 @@ elif escolha_usuario == 2:
             print(f"{vermelho}O Produto {branco}{prod2}{finalizacor} {vermelho}não foi encontrado. Por vavor, verifique a ortografia ou escolha um item da lista acima{finalizacor}")
 
     if total == 0:
-        print(f"\n{vermelho}Carrinho vazio! Nenhum produto foi adicionado.{finalizacor}")
+        print(f"\n{vermelho}Carrinho vazio! Nenhum produto foi adicionado. Por favor renicie o sistema e tente novamente{finalizacor}")
     else:
-        print("=========Tela de Pagamento=========")
-        print(f"{negrito}O valor para pagamento é de R$ {total:.2f}{finalizacor}")
+        print(f"{negrito}\n=========Tela de Pagamento========={finalizacor}")
+        print(f"{negrito}O valor para o pagamento é de {magenta}R$ {total:.2f}{finalizacor}")
 
         valor_pagamento = float(input("\nDigite o valor do pagamento (R$): "))
         troco = valor_pagamento - total
         if valor_pagamento > total:
-            print(f"{branco}O seu troco é R$ {troco:.2f}{finalizacor}")
+            print(f"{branco}\nO seu troco é {magenta}R$ {troco:.2f}{finalizacor}")
             print(f"\n{verde}Produto comprado com sucesso! Volte Sempre :){finalizacor}")
         elif valor_pagamento == total:
             print(f"\n{verde}Produto comprado com sucesso! Volte Sempre :){finalizacor}")
         else:
-            print(f"{vermelho}Valor Insuficiente. Por favor Digite um valor válido.{finalizacor}")
+            print(f"{vermelho}Valor Insuficiente. Por favor Digite um valor válido e renicie o sistema novamente. Aqui num é lugar de liso não kkkk{finalizacor}")
 
 else:
-    print (f"{vermelho}Opção Inválida{finalizacor}")
+    print (f"{vermelho}Opção Inválida. Renicie o sistema e tente novamente{finalizacor}")
