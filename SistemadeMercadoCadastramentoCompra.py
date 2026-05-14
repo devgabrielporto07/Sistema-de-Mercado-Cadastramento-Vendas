@@ -40,7 +40,7 @@ if escolha_usuario == 1:
 
     n = int(input("\nDigite a quantidade de produtos que você deseja cadastrar: "))
     if n == 0:
-        print (f"{vermelho}Nenhum produto cadastrado. Por vavor renicie o sistema e tente novamente{finalizacor}")
+        print (f"{vermelho}Nenhum produto cadastrado. Por favor renicie o sistema e tente novamente{finalizacor}")
     else:
         for i in range(n):
             prod = input(f'Digite o nome do {i+1}º Produto: ').replace (" ", "")
