@@ -93,7 +93,7 @@ elif escolha_usuario == 2:
             print(f"{verde}Sua lista de compras: {lista3}{finalizacor}")
             print(f"{verde}Valor atual: R$ {total:.2f}{finalizacor}")
         else:
-            print(f"{vermelho}O Produto {branco}{prod2}{finalizacor} {vermelho}não foi encontrado. Por vavor, verifique a ortografia ou escolha um item da lista acima{finalizacor}")
+            print(f"{vermelho}O Produto {branco}{prod2}{finalizacor} {vermelho}não foi encontrado. Por favor, verifique a ortografia ou escolha um item da lista acima{finalizacor}")
 
     if total == 0:
         print(f"\n{vermelho}Carrinho vazio! Nenhum produto foi adicionado. Por favor renicie o sistema e tente novamente{finalizacor}")
