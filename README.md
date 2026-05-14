@@ -71,20 +71,20 @@ python SistemaMercadoCadastramentoCompra.py
 - git clone ""
 ---
 
-## Autor
+## Autor:
 
 Feito por **Gabriel Porto** — estudante de Ciência da Computação na UNINASSAU.
 
 ---
 
-## Contribuidores
+## Contribuidores:
 
 - [@Marcos Soares](https://github.com/mssoaress)
 - [@Daniel Mota](https://github.com/dplayerf)
 
 ---
 
-## Contato
+## Contato:
 
 Dúvidas ou sugestões? Abre uma issue no repositório ou me chama nas redes.
 
