@@ -68,53 +68,46 @@ elif escolha_usuario == 2:
     "TOMATE": 8.00,
     "BATATA": 8.00
     } 
-    #Isso é um dicionario onde consigo guardar como uma lista so que atribuir valores também
-
+    
     lista3 = []
-    #essa lista sera atribuida os valores que o usuario digitar nela mais pra frente no while
+    
     total = 0 
-    #essa variavel é feita para atribuir valores a ela a cada produto digitado pelo usuário
 
     print(f"\n{verde}Produtos disponíveis no estoque:{finalizacor}\n")
 
     for nome, preco in produtos.items():
         print(f"{nome} - R$ {preco:.2f}")
-        
-        #esse for ele basicamente consegue adicionar os produtos que tem no estoque juntamente com o preço de cada produto.
 
     while True:
-        prod2 = input("\nDigite o nome do produto que você quer comprar: (para encerrar digite SAIR): ").upper().strip().replace (" ", "") 
-        #aqui é a entrada do usuario no qual vai se atribuir os valores no proximo if
-        if prod2 == "SAIR":
+        prod2 = input("\nDigite o nome do produto que você quer adicionar a sua lista de compras e se quiser ir para o Pagamento digite (PAGAMENTO): ").upper().strip().replace (" ", "") 
+        if prod2 == "PAGAMENTO":
             print (f"\n{negrito}Processando tela de pagamento...{finalizacor}")
-            sleep (1.5)
-            print (f"{negrito}Valor a pagar: R$ {total:.2f}{finalizacor}\n") 
-            #aqui se encerra o while pois se não ele fica em loop infinito
+            sleep (1.5) 
             break
         if prod2 in produtos:
-            lista3.append(prod2) #atribuiçao dos valores digitados
-            total += produtos[prod2] #soma dos valores de cada produto
+            lista3.append(prod2)
+            total += produtos[prod2]
 
-            print(f"{verde}Sua lista de compras: {lista3}{finalizacor}") #aqui nesse print usuario consegue ver a sua lista de compras
-            print(f"{verde}Valor atual: R$ {total:.2f}{finalizacor}") #aqui ele consegue ver o valor do seu carrinho
+            print(f"{verde}Sua lista de compras: {lista3}{finalizacor}")
+            print(f"{verde}Valor atual: R$ {total:.2f}{finalizacor}")
         else:
-            print(f"{vermelho}O Produto {branco}{prod2}{finalizacor} {vermelho}não foi encontrado. Por vavor, verifique a ortografia ou escolha um item da lista acima{finalizacor}") #caso o usuario digite algo diferente do que esta no dicionario ele ira mostrar essa mensagem de erro
+            print(f"{vermelho}O Produto {branco}{prod2}{finalizacor} {vermelho}não foi encontrado. Por vavor, verifique a ortografia ou escolha um item da lista acima{finalizacor}")
 
-    print('=========Tela de Pagamento=========')
-
-    print(f'{negrito}O valor para pagamento é de R$ {total}{finalizacor}')
-    
-    valor_pagamento = float(input("\nDigite o valor do pagamento (R$): "))
-    troco = valor_pagamento - total
-    if valor_pagamento > total:
-        print (f"{branco}O seu troco é {troco:.2f}R${finalizacor}")
-        print (f"\n{verde}Produto comprado com sucesso! Volte Sempre :){finalizacor}")
-        print (f"{branco}Por Favor. Encerre o Sistema ou realiza uma compra novamente{finalizacor}")
-    elif valor_pagamento == total:
-        print (f"\n{verde}Produto comprado com sucesso! Volte Sempre :){finalizacor}")
-        print (f"{branco}Por Favor. Encerre o Sistema ou realiza uma compra novamente{finalizacor}")
+    if total == 0:
+        print(f"\n{vermelho}Carrinho vazio! Nenhum produto foi adicionado.{finalizacor}")
     else:
-        print (f"{vermelho}Valor Insuficiente. Por favor Digite um valor válido. Aqui num é lugar de liso não kkkk.{finalizacor}")
+        print("=========Tela de Pagamento=========")
+        print(f"{negrito}O valor para pagamento é de R$ {total:.2f}{finalizacor}")
+
+        valor_pagamento = float(input("\nDigite o valor do pagamento (R$): "))
+        troco = valor_pagamento - total
+        if valor_pagamento > total:
+            print(f"{branco}O seu troco é R$ {troco:.2f}{finalizacor}")
+            print(f"\n{verde}Produto comprado com sucesso! Volte Sempre :){finalizacor}")
+        elif valor_pagamento == total:
+            print(f"\n{verde}Produto comprado com sucesso! Volte Sempre :){finalizacor}")
+        else:
+            print(f"{vermelho}Valor Insuficiente. Por favor Digite um valor válido.{finalizacor}")
 
 else:
     print (f"{vermelho}Opção Inválida{finalizacor}")
