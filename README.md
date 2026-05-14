@@ -17,8 +17,6 @@ O projeto foi desenvolvido utilizando apenas conceitos fundamentais de Python e 
 
 ## Preview:
 
-
-
  ![Preview do sistema](assets/preview.gif)
 
 
