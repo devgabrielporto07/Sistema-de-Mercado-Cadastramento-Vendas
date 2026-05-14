@@ -86,9 +86,9 @@ elif escolha_usuario == 2:
         prod2 = input("\nDigite o nome do produto que você quer comprar: (para encerrar digite SAIR): ").upper().strip().replace (" ", "") 
         #aqui é a entrada do usuario no qual vai se atribuir os valores no proximo if
         if prod2 == "SAIR":
-            print (f"\n{negrito}Encerrando o sistema...{finalizacor}")
+            print (f"\n{negrito}Processando tela de pagamento...{finalizacor}")
             sleep (1.5)
-            print (f"{negrito}Sistema encerrado, valor a pagar: R$ {total:.2f}. Volte sempre! :){finalizacor}\n") 
+            print (f"{negrito}Valor a pagar: R$ {total:.2f}{finalizacor}\n") 
             #aqui se encerra o while pois se não ele fica em loop infinito
             break
         if prod2 in produtos:
@@ -101,26 +101,20 @@ elif escolha_usuario == 2:
             print(f"{vermelho}O Produto {branco}{prod2}{finalizacor} {vermelho}não foi encontrado. Por vavor, verifique a ortografia ou escolha um item da lista acima{finalizacor}") #caso o usuario digite algo diferente do que esta no dicionario ele ira mostrar essa mensagem de erro
 
     print('=========Tela de Pagamento=========')
+
+    print(f'{negrito}O valor para pagamento é de R$ {total}{finalizacor}')
     
     valor_pagamento = float(input("\nDigite o valor do pagamento (R$): "))
     troco = valor_pagamento - total
     if valor_pagamento > total:
         print (f"{branco}O seu troco é {troco:.2f}R${finalizacor}")
-        print (f"\n{verde}Produto comprado com sucesso!{finalizacor}")
-        print (f"{branco}Por vavor. Encerre o Sistema ou realiza uma compra novamente{finalizacor}")
+        print (f"\n{verde}Produto comprado com sucesso! Volte Sempre :){finalizacor}")
+        print (f"{branco}Por Favor. Encerre o Sistema ou realiza uma compra novamente{finalizacor}")
     elif valor_pagamento == total:
-        print (f"\n{verde}Produto comprado com sucesso!{finalizacor}")
+        print (f"\n{verde}Produto comprado com sucesso! Volte Sempre :){finalizacor}")
         print (f"{branco}Por Favor. Encerre o Sistema ou realiza uma compra novamente{finalizacor}")
     else:
         print (f"{vermelho}Valor Insuficiente. Por favor Digite um valor válido. Aqui num é lugar de liso não kkkk.{finalizacor}")
 
 else:
     print (f"{vermelho}Opção Inválida{finalizacor}")
-
-
-"""valor_pagamento = float(input("Digite o valor do pagamento: "))
-        if valor_pagamento < preco:
-            print (f"{vermelho}Saldo Insuficiente. Por vavor Digite um valor válido. Aqui num é lugar de liso não kkkk.{finalizacor}")
-        elif valor_pagamento > preco:
-            troco = valor_pagamento - preco
-            print (f"{verde}O seu troco é {troco:.2f}{finalizacor}") """
