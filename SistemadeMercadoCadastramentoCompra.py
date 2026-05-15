@@ -10,6 +10,7 @@ magenta = "\033[1;34m"
 amarelo = "\033[1;33m"
 ciano = "\033[1;36m"
 negrito = "\033[1m"
+branco = "\033[1;97m"
 inverte = "\033[7m"
 finalizacor = "\033[0m"
 
@@ -39,22 +40,13 @@ if escolha_usuario == 1: # Para a opção 1 geramos essa condicional com uma lis
 
     lista = []
 
-<<<<<<< HEAD
     n = int(input("\nDigite a quantidade de produtos que você deseja cadastrar: ")) # A quantidade de produto que o usuário queira cadastrar seguindo pelo o seu nome e valor
-
     if n == 0: # Se caso o usuário digite 0 exibe uma mensagem na tela informando que nenhum produto foi cadastrado
-        print (f"{vermelho}Nenhum produto cadastrado. Por vavor renicie o sistema e tente novamente{finalizacor}")
-    else: #Se não procede pela a estrutura de repetição usando a lista gerada anteriormente
-=======
-    n = int(input("\nDigite a quantidade de produtos que você deseja cadastrar: "))
-    if n == 0:
         print (f"{vermelho}Nenhum produto cadastrado. Por favor renicie o sistema e tente novamente{finalizacor}")
-    else:
->>>>>>> 147f8e009fb7a6daa92d4f693e8bd6e5b1bf36c7
+    else: #Se não procede pela a estrutura de repetição usando a lista gerada anteriormente
         for i in range(n):
-            prod = input(f'Digite o nome do {i+1}º Produto: ').replace (" ", "")
-            valor = float(input(f'Digite o valor do {i+1}º Produto (R$): '))
-
+            prod = input(f"Digite o nome do {i+1}º Produto: ")
+            valor = float(input(f"Digite o valor do {i+1}º Produto (R$): "))
             lista.append([prod, valor])
         print (f"\n{magenta}Lista de produtos atualizada!\n{finalizacor}")
         for item in lista:
@@ -102,11 +94,9 @@ elif escolha_usuario == 2: # Para a opção 2 geramos essa condicional com um di
             print(f"{verde}Seu carrinho de compras: {lista3}{finalizacor}")
             print(f"{verde}Valor atual: R$ {total:.2f}{finalizacor}")
         else:
-<<<<<<< HEAD
-            print(f"{vermelho}O Produto {negrito}{prod2}{finalizacor} {vermelho}não foi encontrado. Por vavor, verifique a ortografia ou escolha um item da lista acima{finalizacor}")
-=======
             print(f"{vermelho}O Produto {branco}{prod2}{finalizacor} {vermelho}não foi encontrado. Por favor, verifique a ortografia ou escolha um item da lista acima{finalizacor}")
->>>>>>> 147f8e009fb7a6daa92d4f693e8bd6e5b1bf36c7
+
+
 
     if total == 0: # Caso o usuário digite pagamento sendo que não tenha nada na sua lista de compras é informado que o carrinho está vazio
         print(f"\n{vermelho}Carrinho vazio! Nenhum produto foi adicionado. Por favor renicie o sistema e tente novamente{finalizacor}")
@@ -123,6 +113,5 @@ elif escolha_usuario == 2: # Para a opção 2 geramos essa condicional com um di
             print(f"\n{verde}Produto comprado com sucesso! Volte Sempre :){finalizacor}")
         else: # Se não um valor abaixo uma mensagem informando que o valor foi insuficiente
             print(f"{vermelho}Valor Insuficiente. Por favor Digite um valor válido e renicie o sistema novamente. Aqui num é lugar de liso não kkkk{finalizacor}")
-
 else: # Esse else recai na parte do menu seguindo a indentação caso o usuário digite uma opção que não faz parte do menu terá uma mensagem informando que a opção é inválida
     print (f"{vermelho}Opção Inválida. Renicie o sistema e tente novamente{finalizacor}")
