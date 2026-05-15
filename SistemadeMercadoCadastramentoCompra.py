@@ -39,11 +39,18 @@ if escolha_usuario == 1: # Para a opção 1 geramos essa condicional com uma lis
 
     lista = []
 
+<<<<<<< HEAD
     n = int(input("\nDigite a quantidade de produtos que você deseja cadastrar: ")) # A quantidade de produto que o usuário queira cadastrar seguindo pelo o seu nome e valor
 
     if n == 0: # Se caso o usuário digite 0 exibe uma mensagem na tela informando que nenhum produto foi cadastrado
         print (f"{vermelho}Nenhum produto cadastrado. Por vavor renicie o sistema e tente novamente{finalizacor}")
     else: #Se não procede pela a estrutura de repetição usando a lista gerada anteriormente
+=======
+    n = int(input("\nDigite a quantidade de produtos que você deseja cadastrar: "))
+    if n == 0:
+        print (f"{vermelho}Nenhum produto cadastrado. Por favor renicie o sistema e tente novamente{finalizacor}")
+    else:
+>>>>>>> 147f8e009fb7a6daa92d4f693e8bd6e5b1bf36c7
         for i in range(n):
             prod = input(f'Digite o nome do {i+1}º Produto: ').replace (" ", "")
             valor = float(input(f'Digite o valor do {i+1}º Produto (R$): '))
@@ -95,7 +102,11 @@ elif escolha_usuario == 2: # Para a opção 2 geramos essa condicional com um di
             print(f"{verde}Seu carrinho de compras: {lista3}{finalizacor}")
             print(f"{verde}Valor atual: R$ {total:.2f}{finalizacor}")
         else:
+<<<<<<< HEAD
             print(f"{vermelho}O Produto {negrito}{prod2}{finalizacor} {vermelho}não foi encontrado. Por vavor, verifique a ortografia ou escolha um item da lista acima{finalizacor}")
+=======
+            print(f"{vermelho}O Produto {branco}{prod2}{finalizacor} {vermelho}não foi encontrado. Por favor, verifique a ortografia ou escolha um item da lista acima{finalizacor}")
+>>>>>>> 147f8e009fb7a6daa92d4f693e8bd6e5b1bf36c7
 
     if total == 0: # Caso o usuário digite pagamento sendo que não tenha nada na sua lista de compras é informado que o carrinho está vazio
         print(f"\n{vermelho}Carrinho vazio! Nenhum produto foi adicionado. Por favor renicie o sistema e tente novamente{finalizacor}")
