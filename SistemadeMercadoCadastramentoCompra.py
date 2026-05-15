@@ -70,10 +70,9 @@ elif escolha_usuario == 2: # Para a opção 2 geramos essa condicional com um di
     "MANTEIGA": 12.50,
     "TOMATE": 8.00,
     "BATATA": 8.00
-    } 
-    
+    }
+
     lista3 = [] # Oque o usuário digitar do dicionário será adicionado a um carrinho de compras
-    
     total = 0 # Aqui é inicialmente o valor ser 0 até porque não foi adicionado nada na lista
 
     print(f"\n{verde}Produtos disponíveis no estoque:{finalizacor}\n")
@@ -95,8 +94,6 @@ elif escolha_usuario == 2: # Para a opção 2 geramos essa condicional com um di
             print(f"{verde}Valor atual: R$ {total:.2f}{finalizacor}")
         else:
             print(f"{vermelho}O Produto {branco}{prod2}{finalizacor} {vermelho}não foi encontrado. Por favor, verifique a ortografia ou escolha um item da lista acima{finalizacor}")
-
-
 
     if total == 0: # Caso o usuário digite pagamento sendo que não tenha nada na sua lista de compras é informado que o carrinho está vazio
         print(f"\n{vermelho}Carrinho vazio! Nenhum produto foi adicionado. Por favor renicie o sistema e tente novamente{finalizacor}")
