@@ -41,7 +41,7 @@ if escolha_usuario == 1: # Para a opção 1 geramos essa condicional com uma lis
     lista = []
 
     n = int(input("\nDigite a quantidade de produtos que você deseja cadastrar: ")) # A quantidade de produto que o usuário queira cadastrar seguindo pelo o seu nome e valor
-    if n == 0: # Se caso o usuário digite 0 exibe uma mensagem na tela informando que nenhum produto foi cadastrado
+    if n == 0 or n < 0: # Se caso o usuário digite 0 exibe uma mensagem na tela informando que nenhum produto foi cadastrado ou valores menores que 0
         print (f"{vermelho}Nenhum produto cadastrado. Por favor renicie o sistema e tente novamente{finalizacor}")
     else: #Se não procede pela a estrutura de repetição usando a lista gerada anteriormente
         for i in range(n):
